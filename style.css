@@ -48,6 +48,9 @@
 
   header {
     background: var(--lighting-color);
+    position: sticky;
+    top: 0;
+    z-index: 1;
   }
 
   nav {
@@ -97,6 +100,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 3rem 0;
   }
 
   .hero-img > img {
@@ -136,7 +140,7 @@
       width: 0;
     }
     to {
-      width: 86.5%;
+      width: 80%;
     }
   }
   @keyframes blink-caret {
@@ -154,10 +158,11 @@
 
   #project {
     background: var(--darker-color);
+    padding: 2rem 0;
   }
   #project h2 {
     font-size: 6rem;
-    margin: 2rem 0;
+    padding: 4rem 0;
     text-align: center;
   }
 
@@ -200,7 +205,7 @@
     color: var(--darker-color);
     text-align: center;
     transform: translateY(0px);
-    transition: 0.5 ease-in-out;
+    transition: 0.4s ease-in-out;
   }
   .card-content {
     padding: 2rem;
@@ -212,6 +217,7 @@
 
   .card-content h3 {
     text-align: center;
+    font-size: 1.9rem;
   }
 
 
@@ -226,16 +232,17 @@
     flex-direction: column;
     gap: 10px;
     align-items: center;
+    padding: 3rem 0;
   }
 
   #contact h2 {
     font-size: 6rem;
-    margin: 2.5rem 0;
+    margin: 4rem 0;
   }
 
   #contact h3 {
     font-size: 2.5rem;
-    margin: 1rem 0;
+    margin: 3.5rem 0;
   }
   .icon-container {
     display: flex;
@@ -243,10 +250,59 @@
     align-items: center;
     gap: 2rem;
     color: white;
+    padding: 2.5rem 0;
   }
   .icon-container .icon a {
     color: white;
   }
   .icon-container .icon a i {
     font-size: 3rem;
+  }
+
+  /* Footer style start */
+
+  footer {
+    background: var(--darker-color);
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    font-size: 1.6rem;
+  }
+
+ 
+  /* Media Query for Responsive */
+
+  @media (max-width: 786px) {
+    html {
+      font-size: 40%;
+    }
+    #hero .container {
+      flex-direction: column;
+    }
+    .hero-img {
+      display: grid;
+      place-items: center;
+    }
+    #contact .container {
+      display: grid;
+      place-items: center;
+      height: 70vh;
+    }
+  }
+  @media (max-width: 500px) {
+    html {
+      font-size: 32%;
+    }
+    #hero .container {
+      flex-direction: column;
+    }
+    .hero-img {
+      display: grid;
+      place-items: center;
+    }
+    #contact .container {
+      display: grid;
+      place-items: center;
+      height: 50vh;
+    }
   }
